@@ -17,7 +17,7 @@ class ProfileScreen extends Component {
 
 
   render(){
-
+    console.log(props)
     let coinData = this.props.navigation.state.params.coindetails
     console.log(coinData)
     return(
