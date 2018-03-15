@@ -43,8 +43,8 @@ class CryptoApp extends Component {
               <Header searchBar rounded >
               <Item  >
                 <Icon name="ios-search" />
-                <Input placeholder="Search" onChangeText={(text) => this.searchCoins(text)}/>
-                <Icon name="ios-people" />
+                <Input placeholder="inter coin name" onChangeText={(text) => this.searchCoins(text)}/>
+                <Icon name="ios-search" />
               </Item>
              </Header>
            </View>

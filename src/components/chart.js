@@ -15,20 +15,7 @@ import ButtonGraphList from './button'
 import { connect } from 'react-redux';
 
 
-let chartConfiguration = {
-    type: 'bar',
 
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-
-};
 
 class ChartGraph extends Component {
   constructor(props) {
@@ -40,7 +27,7 @@ class ChartGraph extends Component {
 
       chartConfiguration : false,
       displayCoin: this.props.displayByDays.symbol,
-      dayNumbers: 10
+      dayNumbers: 365
     };
 
   }
@@ -77,14 +64,35 @@ axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${this.props.dis
             dataObj.labels.push(new Date(Token.time * 1000).toDateString())
             dataObj.datasets[0].data.push(Token.close)
     })
-    chartConfiguration.data = dataObj;
+    let chartConfiguration = {
+        type: 'bar',
+        data: dataObj,
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+
+    };
     this.setState({
-      chartConfiguration: chartConfiguration,
-      dayNumbers: 10
+      chartConfiguration: chartConfiguration
     })
   });
 }
 
+componentDidUpdate(prevprops, prevstate){
+  console.log(prevstate.dayNumbers, this.state.dayNumbers)
+ if(prevstate.dayNumbers != this.state.dayNumbers){
+   console.log('updating')
+   this.componentDidMount()
+ }
+
+
+}
 week(){
   this.setState({
     dayNumbers: 7
@@ -106,7 +114,7 @@ year(){
 }
 
 render() {
-  console.log(typeof(this.state.dayNumbers))
+  console.log(this.state.dayNumbers)
   return (
     <Container style={styles.chart}>
         {this.state.chartConfiguration &&
