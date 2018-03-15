@@ -21,11 +21,15 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^25.0.0",
     "native-base": "^2.3.9",
     "prop-types": "^15.5.10",
     "react": "16.2.0",
     "react-native": "^0.52.0",
+    "react-native-chartjs": "^1.0.2",
+    "react-native-fontawesome": "^5.7.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.4.0",
     "react-navigation-redux-helpers": "^1.0.0",
     "react-redux": "^5.0.6",

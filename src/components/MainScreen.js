@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import App from './mainApp';
 
-import LoginStatusMessage from './LoginStatusMessage';
-// import AuthButton from './AuthButton';
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

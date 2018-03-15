@@ -5,6 +5,7 @@ const initialState = {
     isFetching: false,
     error: false,
     allCoins: []
+
   };
 
   export default function coinReducer (state = initialState, action) {
