@@ -38,12 +38,12 @@ class CryptoApp extends Component {
   render(){
     let coinData = (this.props.onSearch.length == 0) ? this.props.coins.coinData : this.props.onSearch
     return(
-      <Container  passProps={'hello'}>
+      <Container >
             <View  style={{borderBottomWidth: 0}}>
               <Header searchBar rounded >
               <Item  >
                 <Icon name="ios-search" />
-                <Input placeholder="inter coin name" onChangeText={(text) => this.searchCoins(text)}/>
+                <Input placeholder="enter coin name" onChangeText={(text) => this.searchCoins(text)}/>
                 <Icon name="ios-search" />
               </Item>
              </Header>

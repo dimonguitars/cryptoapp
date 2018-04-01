@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
   category: {
     justifyContent: 'flex-start',
     alignItems: 'center',
-    fontSize:20,
-    fontWeight: 'bold'
+    fontSize: 20
+    // fontWeight: '500'
   },
   center: {
     justifyContent: 'center',

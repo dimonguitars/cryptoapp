@@ -14,10 +14,7 @@ class ButtonGraph extends Component {
     };
   }
 
-  someFn = () => {
-    var Number = this.state.dayNumbers
-    this.props.callbackFromParent(Number);
-  };
+  
 
 week(){
   this.setState({
@@ -39,7 +36,7 @@ year(){
   })
 
 }
-  render(){  
+  render(){
     return(
       <View style={styles.container} >
         <TouchableHighlight style={styles.button}>

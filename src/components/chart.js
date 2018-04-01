@@ -24,7 +24,6 @@ class ChartGraph extends Component {
     this.threemonth = this.threemonth.bind(this)
     this.year = this.year.bind(this)
     this.state = {
-
       chartConfiguration : false,
       displayCoin: this.props.displayByDays.symbol,
       dayNumbers: 365
