@@ -1,30 +1,22 @@
-import { combineReducers } from 'redux';
-import { NavigationActions } from 'react-navigation';
-import coinReducer from './coinreducers';
+import { combineReducers } from "redux";
+import { NavigationActions } from "react-navigation";
+import coinReducer from "./coinreducers";
 
-import { AppNavigator } from '../navigators/AppNavigator';
+import { AppNavigator } from "../navigators/AppNavigator";
 
-// Start with two routes: The Main screen, with the Login screen on top.
-const firstAction = AppNavigator.router.getActionForPathAndParams('MainPage');
-// const tempNavState = AppNavigator.router.getStateForAction(firstAction);
-// const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
+const firstAction = AppNavigator.router.getActionForPathAndParams("MainPage");
 
-const initialNavState = AppNavigator.router.getStateForAction(
-  firstAction,
-  // tempNavState
-);
+const initialNavState = AppNavigator.router.getStateForAction(firstAction);
 
 function nav(state = initialNavState, action) {
   let nextState;
   switch (action.type) {
-    case 'MainPage':
-      nextState = AppNavigator.router.getStateForAction(
-        state
-      );
+    case "MainPage":
+      nextState = AppNavigator.router.getStateForAction(state);
       break;
-    case 'Logout':
+    case "Logout":
       nextState = AppNavigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'MainPage' }),
+        NavigationActions.navigate({ routeName: "MainPage" }),
         state
       );
       break;
