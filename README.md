@@ -1,5 +1,2 @@
-# Redux example
-
-## Usage
-
-Please see the [Contributors Guide](https://reactnavigation.org/docs/guides/contributors#Run-the-Example-App) for instructions on running these example apps.
+Cryptocurrency app - keep aware of any price change in a crypto word!
+Full 
